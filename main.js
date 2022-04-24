@@ -774,8 +774,8 @@ const doggoInfo = {
   },
 
   assignFact() {
-    this.fact = this.yatesShuffle(this.factList).slice(0, 1);
-    document.getElementById('fun-fact').innerHTML = `Fun fact: ${this.fact[0]}`;
+    this.fact = this.factList[Math.floor(Math.random() * this.factList.length)];
+    document.getElementById('fun-fact').innerHTML = `Fun fact: ${this.fact}`;
   },
 };
 
